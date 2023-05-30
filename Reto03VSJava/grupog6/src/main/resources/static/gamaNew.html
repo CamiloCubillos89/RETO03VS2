@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/gamaFunctions.js"></script>
+    <title>Registrar Nueva GAMA</title>
+</head>
+<body>
+    <header>
+        <h1>Nueva GAMA</h1>
+    </header>
+
+    <main>
+        <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div>
+        
+        <form>
+            <label for="name">Nombre Nueva GAMA: </label>
+            <input type="text" id="name" placeholder="Nombre de la gama" autocomplete="off">
+            <label for="description">Descripción: </label>
+            <textarea id="description" placeholder="Descripción" cols="40" rows="4"></textarea>
+            <button onclick="saveGama()" class="button_form"> Guardar GAMA </button>
+        </form>    
+    </main>
+</body>
+</html>

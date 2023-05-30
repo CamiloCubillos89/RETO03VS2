@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/messageFunctions.js"></script>
+    <title>Registrar Nuevo MESSAGE</title>
+</head>
+<body onload="getCars();getClients();">
+    <header>
+        <h1>Nuevo MESSAGE</h1>
+    </header>
+
+    <main>
+        <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div><br><br>
+        <form>
+            <label for="clients_selector">Seleccione CLIENT: </label>
+            <select id="clients_selector"></select><br><br>
+            <label for="cars_selector">Seleccione CAR: </label>
+            <select id="cars_selector"></select><br><br>
+            <label for="messagetext">Detalle nuevo MESSAGE: </label>
+            <textarea id="messagetext" placeholder="Mensaje" cols="50" rows="10"></textarea>
+            <button onclick="saveMessage()" class="button_form"> Guardar Mensaje </button>
+        </form>
+    </main>
+</body>
+</html>

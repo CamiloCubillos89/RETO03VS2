@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/menuAdminFunctions"></script>
+    <title>Menu ADMIN</title>
+</head>
+<body onload="loadProfile()">
+    <header>
+        <h1>Menu ADMIN</h1>
+    </header>
+
+    <main>
+        <h2 id="welcome"></h2>
+        <button onclick="logOut()">LOG OUT</button><br><br>
+        <div id="optionsMain"> 
+            <nav>
+    
+                <ul>
+                    <li>
+                        <a href="#" onclick="showOptions('opt_message')">Mensajes</a>
+                        <ul id="opt_message" class="options">
+                            <a href="messageNew.html">Guardar Nuevo MESSAGE</a><br>
+                            <a href="messageAll.html">Consultar MESSAGES</a>
+                        </ul>
+                    </li><br>
+                    <li id="link_reservations">
+                        <a href="#" onclick="showOptions('opt_reservation')">Reservaciones</a>
+                        <ul id="opt_reservation" class="options">
+                            <a href="reservationNew.html">Guardar Nueva RESERVATION</a><br>
+                            <a href="reservationAll.html">Consultar RESERVATIONS</a>
+                        </ul>
+                    </li><br>
+                    <li class="disableForClients">
+                        <a href="#" onclick="showOptions('opt_gama')">Gamas</a>
+                        <ul id="opt_gama" class="options">
+                            <a href="gamaNew.html">Guardar Nueva GAMA</a><br>
+                            <a href="gamaAll.html">Consultar GAMAS</a>
+                        </ul>
+                    </li><br>
+                    <li class="disableForClients">
+                        <a href="#" onclick="showOptions('opt_car')">Carros</a>
+                        <ul id="opt_car" class="options">
+                            <a href="carNew.html">Guardar Nuevo CAR</a><br>
+                            <a href="carAll.html">Consultar CARS</a>
+                        </ul>
+                    </li><br>
+                    <li class="disableForClients">
+                        <a href="#" onclick="showOptions('opt_client')">Clientes</a>
+                        <ul id="opt_client" class="options">
+                            <a href="clientNew.html">Guardar Nuevo CLIENT</a><br>
+                            <a href="clientAll.html">Consultar CLIENTS</a>
+                        </ul>
+                    </li><br>
+                    <li class="disableForClients">
+                        <a href="#" onclick="showOptions('opt_admin')">Administradores</a>
+                        <ul id="opt_admin" class="options">
+                            <a href="adminNew.html">Guardar Nuevo ADMIN</a><br>
+                            <a href="adminAll.html">Consultar ADMINS</a>
+                        </ul>
+                    </li><br>
+                    <li class="disableForClients">
+                        <a href="reports.html" onclick="showOptions('opt_report')">Reportes</a>
+                    </li><br>
+                </ul>
+            </nav>   
+        </div>
+    </main>
+</body>
+</html>

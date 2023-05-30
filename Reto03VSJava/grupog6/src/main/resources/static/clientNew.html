@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/clientFunctions.js"></script>
+    <title>Registrar Nuevo CLIENT</title>
+</head>
+<body>
+    <header>
+        <h1>Nuevo CLIENT</h1>
+    </header>
+
+    <main>
+        <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div>
+        <form>
+            <label for="name">Nombre Nuevo CLIENT: </label>
+            <input type="text" id="name" placeholder="Nombre" autocomplete="off">
+            <label for="email">Correo: </label>
+            <input type="email" id="email" placeholder="Correo electrónico" autocomplete="off">
+            <label for="password">Contraseña: </label>
+            <input type="password" id="password" placeholder="Contraseña">
+            <label for="age">Edad: </label>
+            <input type="number" id="age" placeholder="Edad">
+            <button onclick="saveClient()" class="button_form"> Guardar CLIENT </button>
+        </form>
+    </main>
+</body>
+</html>

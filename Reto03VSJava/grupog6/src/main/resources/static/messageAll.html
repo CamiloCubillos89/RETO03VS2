@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/messageFunctions.js"></script>
+    <script src="./js/informationFunctions.js"></script>
+    <title>Mensajes</title>
+</head>
+<body onload="getClients();getCars();getMessages();">
+    <header>
+        <h1>Consultar MESSAGES</h1>
+    </header>
+
+    <main>
+        <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>  
+        <div class="reports">
+            <div class="divInside">
+                <label>Seleccione CLIENT: </label><br>
+                <select id="clients_selector"></select><br><br>
+                <label>Seleccione CAR:</label><br>
+                <select id="cars_selector"></select><br><br>
+                <button onclick="showMessages(dataTemp)" class="button_form">Mostrar Mensajes</button>
+            </div>
+        </div><br>
+        
+        <div>
+            <table id="messages_table"></table>
+        </div>
+    </main>
+</body>
+</html>

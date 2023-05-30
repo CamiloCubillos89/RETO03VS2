@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/reservationsFunctions.js"></script>
+    <title>Registrar Nueva RESERVATION</title>
+</head>
+<body onload = "getClients();getCars()">
+    <header>
+        <h1>Nueva RESERVATION</h1>
+    </header>
+
+    <main>
+        <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div>
+        <div>
+            <form>
+                <label for="clients_selector">Seleccione CLIENT:</label><br>
+                <select id="clients_selector"></select><br><br>
+                <label for="cars_selector">Seleccione CAR:</label><br>
+                <select id="cars_selector"></select><br><br>
+                <label for="startDate">Fecha Reservación:</label><br>
+                <input type="date" id="startDate">
+                <label for="devolutionDate">Fecha Devolucion:</label>
+                <input type="date" id="devolutionDate"><br><br>
+                <button onclick="saveReservation()" class="button_form"> Guardar RESERVATION </button>
+            </form><br>
+        </div>
+        <div>
+        </div>
+    </main>
+</body>
+</html>

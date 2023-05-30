@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/informationFunctions.js"></script>
+    <title>Información de la consulta</title>
+</head>
+<body onload="getDetail();showStatus();">
+    <header>
+        <h1>Información Consulta</h1>
+    </header>
+
+    <main>
+        <button onclick="returnLastWebPage()">BACK</button><br>
+        <div class="reports">
+            <table id="detail_table"></table><br>
+            <button class="button_form" onclick="updateData(sessionStorage.getItem('table_type'))">UPDATE</button>
+        </div>
+    </main>
+</body>
+</html>

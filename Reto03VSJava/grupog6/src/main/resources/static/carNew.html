@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/carsFunctions.js"></script>
+    <title>Registrar Nuevo CAR</title>
+</head>
+<body onload = "getGamas()">
+    <header>
+        <h1>Nuevo CAR</h1>
+    </header>
+
+    <main>
+        <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div>
+        <form>
+            <label for="name">Nombre Nuevo CAR: </label>
+            <input type="text" id="name" placeholder="Nombre del Vehiculo" autocomplete="off">
+            <label for="brand">Marca: </label>
+            <input type="text" id="brand" placeholder="Marca">
+            <label for="yearCar">Año Fabricación: </label>
+            <input type="number" id="yearCar" placeholder="Año-Modelo">
+            <label for="description">Descripción: </label>
+            <textarea id="description" placeholder="Descripción del Vehículo" cols="40" rows="4"></textarea>
+            <label for="gamas_selector">Gama: </label><br>
+            <select id="gamas_selector"></select><br><br>
+            <button onclick="saveCar()" class="button_form"> Guardar CAR </button>
+        </form>
+    </main>
+</body>
+</html>
