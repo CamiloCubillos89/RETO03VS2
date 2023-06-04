@@ -16,17 +16,17 @@ public class MessageRepository {
     @Autowired
     private MessageCrudRepository messageCrudRepository;
 
-    //retorna todas las entidades en BD
-    public List<Message> getAll() {
-        return (List<Message>) messageCrudRepository.findAll();
-    }
-
     //guarda la entidad en BD
     public Message addMessage(Message message) {
         if (message.getIdMessage() == null || message.getIdMessage() == 0)
             return messageCrudRepository.save(message);
         else
             return message;
+    }
+
+    //retorna todas las entidades en BD
+    public List<Message> getAll() {
+        return (List<Message>) messageCrudRepository.findAll();
     }
 
      //Determina si el Message existe en BD

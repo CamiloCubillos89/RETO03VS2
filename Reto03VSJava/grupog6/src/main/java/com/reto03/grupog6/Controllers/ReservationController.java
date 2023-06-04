@@ -1,6 +1,5 @@
 package com.reto03.grupog6.Controllers;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +11,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.reto03.grupog6.DTO.ClientsReport;
 import com.reto03.grupog6.DTO.StatusReport;
 import com.reto03.grupog6.Entities.Reservation;
 import com.reto03.grupog6.Services.ReservationService;
 
-@RestController//
+@RestController
 @RequestMapping("/api/Reservation")
 public class ReservationController {
     @Autowired
@@ -29,24 +30,27 @@ public class ReservationController {
         return reservationService.getAll();
     }
 
+    @GetMapping("/{id}")
+    public Reservation getReservation(@PathVariable Integer id) {
+        return reservationService.getReservation(id);
+    }
+
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Reservation addReservation(@RequestBody Reservation reservation) {
         return reservationService.addReservation(reservation);
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Reservation updReservation(@RequestBody Reservation reservation) {
         return reservationService.updReservation(reservation);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delReservation(@PathVariable Integer id) {
          reservationService.delReservation(id);
-    }
-
-    @GetMapping("/{id}")
-    public Reservation getReservation(@PathVariable Integer id) {
-        return reservationService.getReservation(id);
     }
 
     //Fechas reservaciones
@@ -59,7 +63,7 @@ public class ReservationController {
     //Devuelve el estado de las reservaciones
     @GetMapping("/report-status")
     public StatusReport getStatusReport() {
-        //        return reservationService.getStatusReport();
+        // return reservationService.getStatusReport();
         return reservationService.getStatusReportQuery();
     }
 

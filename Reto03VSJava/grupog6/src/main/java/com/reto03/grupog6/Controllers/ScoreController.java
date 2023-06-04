@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.reto03.grupog6.Entities.Score;
 import com.reto03.grupog6.Services.ScoreService;
@@ -27,16 +29,19 @@ public class ScoreController {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Score addScore(@RequestBody Score score) {
         return scoreService.addScore(score);
     }
 
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Score updScore(@RequestBody Score score) {
         return scoreService.updScore(score);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delScore(@PathVariable Integer id) {
          scoreService.delScore(id);
     }

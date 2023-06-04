@@ -85,7 +85,7 @@ function showCars(data) {
     htmlCode += "<td>" + data[i].description + "</td>";
     htmlCode += "<td>" + (data[i].gama==null?'No registra':data[i].gama.name) + "</td>";
     htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idCar + ",\"Car\",tHeaders)'>" + "Editar" + "</a></td>";
-    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idCar + ",\"Car\")'>" + "Borrar" + "</a></td>";
+    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idCar + ",\"Car\")'>" + "Eliminar" + "</a></td>";
     htmlCode += "</tr>";
   }
   htmlCode += "</tbody>";

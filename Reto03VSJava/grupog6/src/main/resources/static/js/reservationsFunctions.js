@@ -16,10 +16,10 @@ function getReservations() {
       showReservations(response);
     },
     error: function (xhr, status) {
-      alert("ERROR");
+     // alert("ERROR");
     },
     complete: function (xhr, status) {
-      alert("COMPLETED");
+      // alert("COMPLETED");
     },
   });
 }
@@ -53,7 +53,7 @@ function saveReservation() {
       cleanData();
     },
     error: function (response, xhr) {
-      alert("ERROR");
+      // alert("ERROR");
     },
     complete: function (xhr, status) {
       location.href = sessionStorage.getItem("thisUrl");
@@ -81,7 +81,7 @@ function showReservations(data) {
   tHeaders.forEach(element => {
       htmlCode += "<th>" + element + "</th>";
   });
-  htmlCode += "<th>Editar</th><th>Borrar</th></tr></thead> ";
+  htmlCode += "<th>Editar</th><th>Eliminar</th></tr></thead> ";
       
   //Presentar los datos traídos de BD
   htmlCode += "<tbody>";
@@ -101,7 +101,7 @@ function showReservations(data) {
       htmlCode += "<td>" + data[i].car.name + "</td>";
       htmlCode += "<td>" + ((data[i].score==null)?"No calificado":data[i].score.result) + "</td>";
       htmlCode += "<td>" + data[i].status + "</td>";
-      htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idReservation + ",\"Reservation\",tHeaders)'>" + "Consultar-Editar" + "</a></td>";
+      htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idReservation + ",\"Reservation\",tHeaders)'>" + "Editar" + "</a></td>";
       htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idReservation + ",\"Reservation\")'>" + "Eliminar" + "</a></td>";
       htmlCode += "</tr>";
     }
@@ -129,10 +129,10 @@ function deleteData(id, tableType){
       getReservations();
     },
     error: function (xhr, status) {
-      alert("ERROR");
+     // alert("ERROR");
     },
     complete: function (xhr, status) {
-      alert("COMPLETED");
+      // alert("COMPLETED");
     },
   });
 }
@@ -149,10 +149,10 @@ function getCars() {
       showCars(response); 
     },
     error: function (xhr, status) {
-      alert("ERROR");
+      // alert("ERROR");
     },
     complete: function (xhr, status) {
-       alert("COMPLETED");
+      // alert("COMPLETED");
     },
   });
 }
@@ -184,10 +184,10 @@ function getClients() {
         showClients(response); 
       },
       error: function (xhr, status) {
-        alert("ERROR");
+      //  alert("ERROR");
       },
       complete: function (xhr, status) {
-        alert("COMPLETED");
+      //  alert("COMPLETED");
       },
     });
   } else {
@@ -201,10 +201,10 @@ function getClients() {
         showClients(response); 
       },
       error: function (xhr, status) {
-        alert("ERROR");
+      //  alert("ERROR");
       },
       complete: function (xhr, status) {
-        alert("COMPLETED");
+      //  alert("COMPLETED");
       },
     });
   }

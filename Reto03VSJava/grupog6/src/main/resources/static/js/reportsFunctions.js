@@ -22,10 +22,10 @@ function reservationDates(){
             reservationsDates(response);
         }, 
         error: function(xhr, status){
-            alert("ERROR");
+          //  alert("ERROR");
         },
         complete: function(xhr, status){
-            alert("COMPLETED");
+          //  alert("COMPLETED");
         },
     });
 }
@@ -92,10 +92,10 @@ function reservationStatus(){
             $("#cancelled").text(response.cancelled);
         },
         error: function(xhr, status){
-            alert("ERROR");
+          //  alert("ERROR");
         },
         complete: function(xhr, status){
-            alert("COMPLETED");
+          //  alert("COMPLETED");
         },
     });
 }
@@ -111,10 +111,10 @@ function topClients(){
             showTopClients(response);
         },
         error: function(xhr, status){
-            alert("ERROR");
+          //  alert("ERROR");
         },
         complete: function(xhr, status){
-            alert("COMPLETED");
+          //  alert("COMPLETED");
         },
     });
 }

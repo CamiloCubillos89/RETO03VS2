@@ -14,9 +14,6 @@
     </header>
 
     <main>
-        <div>
-            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
-        </div><br><br>
         <form>
             <label for="clients_selector">Seleccione CLIENT: </label>
             <select id="clients_selector"></select><br><br>
@@ -25,7 +22,10 @@
             <label for="messagetext">Detalle nuevo MESSAGE: </label>
             <textarea id="messagetext" placeholder="Mensaje" cols="50" rows="10"></textarea>
             <button onclick="saveMessage()" class="button_form"> Guardar Mensaje </button>
-        </form>
+        </form><br>
+         <div>
+            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
+        </div>
     </main>
 </body>
 </html>

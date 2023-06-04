@@ -65,7 +65,7 @@ function showGamas(data) {
     tHeaders.forEach(element => {
         htmlCode += "<th>" + element + "</th>";
     });
-    htmlCode += "<th>Editar</th>" + "<th>Borrar</th>"  + "</tr></thead> ";
+    htmlCode += "<th>Editar</th>" + "<th>Eliminar</th>"  + "</tr></thead> ";
         
   //Presentar los datos traídos de BD
   htmlCode += "<tbody>";
@@ -74,7 +74,7 @@ function showGamas(data) {
     htmlCode += "<td>" + data[i].name + "</td>";
     htmlCode += "<td>" + data[i].description + "</td>";
     htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idGama + ",\"Gama\",tHeaders)'>" + "Editar" + "</a></td>";
-    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idGama + ",\"Gama\")'>" + "Borrar" + "</a></td>";
+    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idGama + ",\"Gama\")'>" + "Eliminar" + "</a></td>";
     htmlCode += "</tr>";
   }
   htmlCode += "</tbody>";

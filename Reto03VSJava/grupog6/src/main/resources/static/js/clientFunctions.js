@@ -12,10 +12,10 @@ function getClients() {
         showClients(response);
       },
       error: function (xhr, status) {
-        alert("ERROR");
+       // alert("ERROR");
       },
       complete: function (xhr, status) {
-        alert("COMPLETED");
+       // alert("COMPLETED");
       },
     });
   }
@@ -70,7 +70,7 @@ function getClients() {
     tableHeaders.forEach(element => {
         htmlCode += "<th>" + element + "</th>";
     });
-    htmlCode += "<th>Editar</th>" + "<th>Borrar</th>"  + "</tr></thead> ";
+    htmlCode += "<th>Editar</th>" + "<th>Eliminar</th>"  + "</tr></thead> ";
         
   //Presentar los datos traídos de BD
   htmlCode += "<tbody>";

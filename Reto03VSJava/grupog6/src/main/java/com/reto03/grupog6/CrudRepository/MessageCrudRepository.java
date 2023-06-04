@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.reto03.grupog6.Entities.Message;
 
-public interface MessageCrudRepository extends CrudRepository<Message,Integer>  {
+public interface MessageCrudRepository extends CrudRepository<Message, Integer> {
     
 }

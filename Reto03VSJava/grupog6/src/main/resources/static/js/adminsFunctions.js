@@ -78,7 +78,7 @@ function getAdmins() {
     htmlCode += "<td>" + data[i].name + "</td>";
     htmlCode += "<td>" + data[i].email + "</td>";
     htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idAdmin + ",\"Admin\",tHeaders)'>Editar</a></td>";
-    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idAdmin + ",\"Admin\")'>Borrar</a></td>";
+    htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idAdmin + ",\"Admin\")'>Eliminar</a></td>";
     htmlCode += "</tr>";
     }
     htmlCode += "</tbody>";

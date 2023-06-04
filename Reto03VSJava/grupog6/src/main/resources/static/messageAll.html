@@ -14,21 +14,20 @@
         <h1>Consultar MESSAGES</h1>
     </header>
 
-    <main>
-        <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>  
+    <main> 
         <div class="reports">
             <div class="divInside">
                 <label>Seleccione CLIENT: </label><br>
                 <select id="clients_selector"></select><br><br>
                 <label>Seleccione CAR:</label><br>
                 <select id="cars_selector"></select><br><br>
-                <button onclick="showMessages(dataTemp)" class="button_form">Mostrar Mensajes</button>
+                <button onclick="showMessages(dataTemp)" class="button_form">Mostrar Mensajes</button><br><br>
             </div>
-        </div><br>
-        
-        <div>
-            <table id="messages_table"></table>
         </div>
+        <div>
+            <table id="messages_table"></table><br> 
+        </div>
+        <button onclick="location.href='./menuAdmin.html'">BACK</button>
     </main>
 </body>
 </html>

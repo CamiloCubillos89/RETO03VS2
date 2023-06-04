@@ -12,18 +12,16 @@
     <header>
         <h1>Nueva GAMA</h1>
     </header>
-
-    <main>
-        <div>
-            <button onclick="location.href='./menuAdmin.html'">BACK</button><br><br>
-        </div>
-        
+    <main>      
         <form>
             <label for="name">Nombre Nueva GAMA: </label>
-            <input type="text" id="name" placeholder="Nombre de la gama" autocomplete="off">
-            <label for="description">Descripción: </label>
-            <textarea id="description" placeholder="Descripción" cols="40" rows="4"></textarea>
-            <button onclick="saveGama()" class="button_form"> Guardar GAMA </button>
+            <input type="text" id="name" placeholder="Nombre de la gama" autocomplete="off"><br>
+            <label for="description">Descripción: </label><br>
+            <textarea id="description" placeholder="Descripción" cols="40" rows="4"></textarea><br>
+            <button onclick="saveGama()" class="button_form"> Guardar GAMA </button><br><br>
+            <div>
+                <button onclick="location.href='./menuAdmin.html'">BACK</button>
+            </div>
         </form>    
     </main>
 </body>

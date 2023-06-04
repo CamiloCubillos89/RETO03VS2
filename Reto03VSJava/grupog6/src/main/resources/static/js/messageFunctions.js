@@ -75,7 +75,7 @@ function showMessages(data) {
   tHeaders.forEach(element => {
       htmlCode += "<th>" + element + "</th>";
   });
-  htmlCode += "<th>Editar</th><th>Borrar</th></tr></thead> ";
+  htmlCode += "<th>Editar</th><th>Eliminar</th></tr></thead> ";
       
   //Presentar los datos traídos de BD
   htmlCode += "<tbody>";
@@ -92,7 +92,7 @@ function showMessages(data) {
       htmlCode += "<td>" + data[i].car.name + "</td>";
       htmlCode += "<td>" + data[i].messageText + "</td>";
       htmlCode += "<td><a href='#' onclick='dataStorageSession(" + data[i].idMessage + ",\"Message\",tHeaders)'>" + "Editar" + "</a></td>";
-      htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idMessage + ",\"Message\")'>" + "Borrar" + "</a></td>";
+      htmlCode += "<td><a href='#' onclick='deleteData(" + data[i].idMessage + ",\"Message\")'>" + "Eliminar" + "</a></td>";
       htmlCode += "</tr>";
     }
   }

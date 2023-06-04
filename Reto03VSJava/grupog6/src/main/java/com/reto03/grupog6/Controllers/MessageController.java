@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.reto03.grupog6.Entities.Message;
 import com.reto03.grupog6.Services.MessageService;
@@ -27,16 +29,19 @@ public class MessageController {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message addMessage(@RequestBody Message message){
         return messageService.addMessage(message);
     }  
     
     @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
     public Message updMessage(@RequestBody Message message) {
         return messageService.updMessage(message);
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delMessage(@PathVariable Integer id) {
          messageService.delMessage(id);
     }
@@ -45,4 +50,5 @@ public class MessageController {
     public Message getMessage(@PathVariable Integer id) {
         return messageService.getMessage(id);
     }
+
 }
